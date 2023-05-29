@@ -1,0 +1,160 @@
+/*  Section: reset */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/*  Section: Globally Custom Props for type and color*/
+:root{
+  /* type */
+  --body-type: 400 1.1rem Merriweather, Serif;
+  --title-type: 400 1.25rem Mulish, Sans-Serif;
+
+  /* color */
+  --dark-backgroundColor:#113e5c;
+  --dark-textColor:#fffffff3;
+}
+
+/*  Section: Global Styles that can be inherited */
+body {
+  font: var(--body-type);
+  padding-top: 1rem;
+}
+
+.tr_darkBackground{
+  background-color: var(--dark-backgroundColor);
+  color: var(--dark-textColor);
+}
+
+/* Section: Main Header with Nav, Img(Hero), Title, Byline*/
+/* Nav contains Modal and Logo *
+/* This styles the drop shadow of the main header's nav */
+.tr_backgroundMainHeader{
+  position: relative;
+  box-shadow: 0px 3px 5px -3px rgb(99, 99, 99);
+}
+/* Series Title */
+.tr_seriesTitle{
+  font: 700 1rem Mulish, Serif;
+  color:var(--bs-secondary);
+}
+.tr_seriesTitleSmallDevice-border{
+  width:21ch;
+  border-top: 1px solid var(--bs-secondary);
+}
+
+/* this styles the logo */
+nav>a>img{
+  width: 125px;
+}
+/* Customizing the Modal using CSS props of bootstrap */
+
+
+/* sizing and layout of the modal*/
+.modal-sm{
+  max-width: 300px;
+}
+.modal-body{
+  display:flex;
+  justify-content: space-around;
+}
+.modal-footer>p{
+  padding: .5rem;
+  width:100%;
+  height: 2.25rem;
+
+  white-space: nowrap;
+  overflow: hidden;
+  /* cursor: pointer; */
+
+  font-size: .8rem;
+  color:var(--bs-secondary)
+}
+
+
+/* Now working on the article header body and footer.
+*/
+
+/* TODO Hero_image make it responsive - completed successfully */
+.tr_heroImage {
+  /* border: 4px solid rgb(73, 73, 73); */
+  padding-top: calc(100vw * 508 / 1442);
+  background-image: url(./4_Images_Logo/modifiedImages/artDirection_1/hero_1400.jpeg);
+  background-size: cover;
+  background-position: center center;
+}
+@media screen and (min-width: 1200px) {
+  .tr_heroImage {
+    padding-top: calc(100vw * 508 / 1442 - 12vh);
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .tr_heroImage {
+    padding-top: calc(100vw * 508 / 1442 + 12vh);
+  }
+}
+
+
+/* TODO style the header portion of the article */
+.tr_articleHeader{
+  font-family:Mulish, sans-serif;
+}
+.tr_headline{
+  padding-top:0.5em;
+  /* font-family: Mulish,sans-serif; */
+  font-weight: 700;
+  font-size: 3rem;
+}
+.tr_subhead{
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color:var(--bs-gray-400);
+}
+@media screen and (max-width:768px) {
+  .tr_headline{
+    font-size: 2rem;
+    padding-top: 0.75em;
+  }
+  .tr_subhead{
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1rem;
+  }
+}
+.author, .date{
+  color:var(--bs-gray-400);
+  font-size: 1rem;
+}
+
+
+/* Now working on the body part of the article */
+.sectionH2{
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: var(--bas-gray-400);
+  margin-bottom: 1.5rem;
+}
+
+.sectionP{
+  max-width: 75ch;
+  margin-bottom: 1.75rem;
+  line-height: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
